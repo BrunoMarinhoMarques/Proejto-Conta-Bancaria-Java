@@ -2,6 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
+        
         //Criando uma instancia do tipo Scanner e criando as variaveis
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
         int numero;
@@ -16,12 +17,12 @@ public class ContaTerminal {
         System.out.println("Agora digite a Agência por favor: ");
         agencia = scanner.next();
 
+        //esvaziando buffer do teclado
+        scanner.nextLine();
+
         //exibindo mensagem e recebendo o que for digitado pelo usuario
         System.out.println("Por favor, digite seu nome: ");
-        nomeCliente = scanner.next();
-
-        //limpando buffer do teclado
-        scanner.nextLine();
+        nomeCliente = scanner.nextLine();
 
         //exibindo mensagem e recebendo o que for digitado pelo usuario
         System.out.println("Digite seu saldo: ");
@@ -33,6 +34,7 @@ public class ContaTerminal {
 
 
 
+    
 
     }
 }
